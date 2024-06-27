@@ -1,0 +1,28 @@
+{
+    "name": "userscript-builder",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nagisa-win/userscript-builder"
+    },
+    "scripts": {
+        "postinstall": "export PATH=$PATH:$(pwd)/node_modules/.bin && mkdir -p output",
+        "babel": "babel input --out-dir output",
+        "minify": "node src/index.js",
+        "build": "pnpm run babel && pnpm run minify"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "pnpm": ">=3.0.1"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.24.5",
+        "@babel/core": "^7.24.5",
+        "@babel/preset-env": "^7.24.5",
+        "uglify-js": "^3.17.4"
+    }
+}

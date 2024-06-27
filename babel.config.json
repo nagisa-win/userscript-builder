@@ -1,0 +1,11 @@
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "targets": [">20%", "not dead", "ie >= 10"]
+            }
+        ]
+    ],
+    "comments": false
+}
